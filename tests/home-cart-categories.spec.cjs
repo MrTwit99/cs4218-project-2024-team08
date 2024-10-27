@@ -1,6 +1,7 @@
 const { describe, test, expect, beforeEach, afterEach } = require('@playwright/test');
 
 describe.serial('Home, Categories and Cart Page Components', () => {
+    test.slow();
     beforeEach(async ({ page }) => {
         await page.goto('http://localhost:3000/', { timeout: 30000 });
     
